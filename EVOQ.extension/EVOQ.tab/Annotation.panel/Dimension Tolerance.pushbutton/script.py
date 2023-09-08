@@ -42,8 +42,11 @@ with open('DefaultText.csv', 'rb') as csvfile:
  # Select elements
 sel_filter = CustomISelectionFilter("Dimensions")
 
-sel = uidoc.Selection.PickElementsByRectangle(sel_filter, "Select Elements.")
-
+try:
+    sel = uidoc.Selection.PickElementsByRectangle(sel_filter, "Select Elements.")
+except:
+    sel = None
+    
  # UI to enter dimension tolerance values
 components = [Label('Enter Prefix/Suffix:'),
     Label('Prefix:'),
@@ -53,18 +56,19 @@ components = [Label('Enter Prefix/Suffix:'),
     Separator(),
     Button('Enter')]
 form = FlexForm('Dimension Tolerance', components)
-form.show()
 
- # Update default values to current values
-if form.values['textbox1'] != prefix or form.values['textbox2'] != suffix:
-    prefix = form.values['textbox1']
-    suffix = form.values['textbox2']
-    with open('DefaultText.csv', "wb") as csvfile:
-                csvwriter = csv.writer(csvfile)
-                csvwriter.writerow([prefix, suffix])
-
- # Transaction to update text elemenets
 if sel:
+    form.show()
+
+     # Update default values to current values
+    if form.values['textbox1'] != prefix or form.values['textbox2'] != suffix:
+        prefix = form.values['textbox1']
+        suffix = form.values['textbox2']
+        with open('DefaultText.csv', "wb") as csvfile:
+                    csvwriter = csv.writer(csvfile)
+                    csvwriter.writerow([prefix, suffix])
+     
+     # Transaction to update text elemenets
     t.Start()
     for i in sel:
         i.Prefix = prefix
