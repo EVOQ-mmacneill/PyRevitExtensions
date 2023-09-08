@@ -6,7 +6,9 @@ This extension runs on python, which requires PyRevit to be installed first in o
 
 Step 1: Install PyRevit
 
-Click on the link below, then folow the installation instructions provided.
+Click on the link below, then download and install the installer file.
+https://github.com/eirannejad/pyRevit/releases
+![image](https://github.com/EVOQ-mmacneill/PyRevitExtensions/assets/144481330/3b7b097b-e0fe-4522-9496-1da03eb8cc82)
 
 Step 2: Install EVOQ PyRevit extension.
 
@@ -23,6 +25,7 @@ Click on the settings button:
 ![image](https://github.com/EVOQ-mmacneill/PyRevitExtensions/assets/144481330/4b58511f-a46b-49eb-ae86-5aa8813aba51)
 
 Navigate to the "Custom Extension Directories" section, select "Add folder", set the location for your unzipped PyRevitExtensions folder, then "Save Settings and Reload."
+
 ![image](https://github.com/EVOQ-mmacneill/PyRevitExtensions/assets/144481330/d0bd4201-65d1-466b-96db-d7885bd09dba)
 
 Voila! You should now see the EVOQ tab adjacent to the pyRevit tab:
