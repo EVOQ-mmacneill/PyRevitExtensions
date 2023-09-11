@@ -71,6 +71,11 @@ if sel:
      # Transaction to update text elemenets
     t.Start()
     for i in sel:
-        i.Prefix = prefix
-        i.Suffix = suffix
+        if i.NumberOfSegments >0:
+            for i in i.Segments:
+                i.Prefix = prefix
+                i.Suffix = suffix
+        else:
+            i.Prefix = prefix
+            i.Suffix = suffix
     t.Commit()
