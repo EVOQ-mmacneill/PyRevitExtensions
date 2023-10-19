@@ -50,5 +50,5 @@ Navigate to the "Custom Extension Directories" section, select "Add folder", set
 You should now have the EVOQ tab adjacent to the pyRevit tab in your Revit ribbon:
 
 <p align="left">
- <img src="https://github.com/EVOQ-mmacneill/PyRevitExtensions/assets/144481330/d4b2f103-56d8-484e-8208-050b8f2ed682">
+ <img src="https://github.com/EVOQ-mmacneill/PyRevitExtensions/assets/144481330/5671f32a-12da-437c-a74f-26b7db71fb5d">
 </p>
